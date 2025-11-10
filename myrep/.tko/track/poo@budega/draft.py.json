@@ -1,0 +1,119 @@
+{
+    "patches": [
+        {
+            "label": "2025-11-09_16-43-51",
+            "content": "@@ -1,20 +1,20 @@\n class Pe\n-rson\n+ssoa\n :%0A    de\n@@ -31,17 +31,17 @@\n (self, n\n-a\n+o\n me: str)\n@@ -68,16 +68,16 @@\n lf.n\n-a\n+o\n me = n\n-a\n+o\n me%0A%0A\n@@ -127,17 +127,17 @@\n n self.n\n-a\n+o\n me%0A%0Aclas\n@@ -154,598 +154,4 @@\n     \n-def __init__(self, counter_size: int) -%3E None:%0A        self.counter: list%5BPerson %7C None%5D = %5B%5D%0A        for _ in range(counter_size):%0A            self.counter.append(None)%0A        self.waiting: list%5BPerson%5D = %5B%5D%0A%0A    def __str__(self) -%3E str:%0A        saida: str = %22Caixas: %5B %22%0A        for person in self.counter:%0A            saida += str(person) + %22 %22%0A        saida += %22%5D%5Cn%22%0A        saida += %22Espera: %5B %22%0A        for person in self.waiting:%0A            saida += str(person) + %22 %22%0A        saida += %22%5D%22%0A        return saida%0A%0A%0Aperson = Person(%22Cezar%22)%0Aprint(person)%0A%0Amarket = Market(5)%0Aprint(market)\n",
+            "lines": "9"
+        },
+        {
+            "label": "2025-11-09_16-56-23",
+            "content": "@@ -365,190 +365,8 @@\n %5B%5D%0A%0A\n-    def arrive(self, person: Person):%0A        self.waiting.append(person)%0A%0A    def call(self, index: int):%0A        self.counter%5Bindex%5D = self.waiting%5B0%5D%0A        del self.waiting%5B0%5D%0A%0A\n     \n@@ -422,16 +422,17 @@\n aixas: %5B\n+ \n %22%0A      \n@@ -465,96 +465,8 @@\n er:%0A\n-            if person is None:%0A                saida += %22-----, %22%0A            else:%0A    \n     \n@@ -497,17 +497,16 @@\n son) + %22\n-,\n  %22%0A     \n@@ -535,43 +535,48 @@\n     \n-esperando = %22, %22.join(%5Bstr(x) for x\n+saida += %22Espera: %5B %22%0A        for person\n  in \n@@ -591,11 +591,14 @@\n ting\n-%5D)%0A\n+:%0A    \n     \n@@ -614,164 +614,127 @@\n  += \n-f%22Espera: %5B%7Besperando%7D%5D%22%0A        return saida%0A%0A%0Amarket = Market(5)%0Amarket.arrive(Person(%22Cezinha%22))%0Amarket.arrive(Person(%22Bola%22))%0Amarket.arrive(Person(%22PH%22)\n+str(person) + %22 %22%0A        saida += %22%5D%22%0A        return saida%0A%0A%0Aperson = Person(%22Cezar%22)%0Aprint(person)%0A%0Amarket = Market(5\n )%0Apr\n",
+            "lines": "31"
+        },
+        {
+            "label": "2025-11-09_17-18-16",
+            "content": "@@ -448,547 +448,31 @@\n def \n-leave(self, index: int):%0A        if index %3C 0 or index %3E= len(self.counter):%0A            print(%22Indice invalido%22)%0A            return%0A        if self.counter%5Bindex%5D is None:%0A            print(%22Caixa vazio%22)%0A            return%0A        %0A%0A    def call(self, index: int):%0A        if index %3C 0 or index %3E= len(self.counter):%0A            print(%22Indice invalido%22)%0A            return%0A        if len(self.waiting) == 0:%0A            print(%22Fila vazia%22)%0A            return%0A        if self.counter%5Bindex%5D is not None:%0A            print(%22Caixa ocupado%22)\n+call(self, index: int):\n %0A   \n@@ -998,24 +998,24 @@\n on(%22Bola%22))%0A\n+\n market.arriv\n@@ -1034,39 +1034,8 @@\n %22))%0A\n-market.call(1)%0Amarket.call(1)%0A%0A\n prin\n",
+            "lines": "39"
+        },
+        {
+            "label": "2025-11-09_17-28-01",
+            "content": "@@ -568,38 +568,33 @@\n           return\n- None\n %0A\n+\n         if self.\n@@ -668,21 +668,16 @@\n   return\n- None\n %0A       \n@@ -681,286 +681,9 @@\n     \n-aux = self.counter%5Bindex%5D = None%0A        self.counter%5Bindex%5D = None%0A        return aux%0A    %0A    def give_up(self, name: str):%0A        for i, person in enumerate(self.waiting):%0A            if person.name == name:%0A                del self.waiting%5Bi%5D%0A                break%0A        \n+%0A\n %0A   \n@@ -1440,24 +1440,8 @@\n a%0A%0A%0A\n-def main():%0A    \n mark\n@@ -1456,129 +1456,142 @@\n ket(\n-0)%0A    line = input()%0A    print(%22$%22 + line)%0A    args = line.split(%22 %22)%0A    if args%5B0%5D == %22show%22%0A        print(market)%0A%0Amain(\n+5)%0Amarket.arrive(Person(%22Cezinha%22))%0Amarket.arrive(Person(%22Bola%22))%0Amarket.arrive(Person(%22PH%22))%0Amarket.call(1)%0Amarket.call(1)%0A%0Aprint(market\n )\n",
+            "lines": "59"
+        },
+        {
+            "label": "2025-11-09_17-41-15",
+            "content": "@@ -1850,17 +1850,16 @@\n = %22show%22\n-:\n %0A       \n",
+            "lines": "68"
+        },
+        {
+            "label": "2025-11-09_17-41-24",
+            "content": "@@ -1877,94 +1877,8 @@\n ket)\n-%0A    elif args%5B0%5D == %22init%22:%0A        qntd = int(args%5B0%5D)%0A        market = Market(qntd)\n %0A%0Ama\n",
+            "lines": "68"
+        },
+        {
+            "label": "2025-11-09_17-42-11",
+            "content": "@@ -1926,17 +1926,17 @@\n nt(args%5B\n-1\n+0\n %5D)%0A     \n@@ -1963,121 +1963,8 @@\n ntd)\n-%0A    elif args%5B0%5D == %22insert%22:%0A        market.arrive(Person(args%5B1%5D))%0A    else:%0A        print(%22comando invalido%22)\n %0A%0Ama\n",
+            "lines": "71"
+        },
+        {
+            "label": "2025-11-09_17-44-10",
+            "content": "@@ -1762,24 +1762,8 @@\n (0)%0A\n-    while True:%0A\n     \n@@ -1847,49 +1847,8 @@\n %5D ==\n- %22end%22:%0A        break%0A    elif args%5B0%5D ==\n  %22sh\n",
+            "lines": "75"
+        },
+        {
+            "label": "2025-11-09_17-45-18",
+            "content": "@@ -1774,21 +1774,16 @@\n e True:%0A\n-%0A    \n     line\n@@ -1793,28 +1793,24 @@\n input()%0A    \n-   \n- \n print(%22$%22 + \n@@ -1811,28 +1811,24 @@\n %22$%22 + line)%0A\n-    \n     args = l\n@@ -1846,20 +1846,16 @@\n  %22)%0A    \n-  \n-  \n if args%5B\n@@ -1867,36 +1867,32 @@\n  %22end%22:%0A        \n-    \n break%0A        el\n@@ -1881,28 +1881,24 @@\n   break%0A    \n- \n-   \n elif args%5B0%5D\n@@ -1909,20 +1909,16 @@\n %22show%22:%0A\n-    \n         \n@@ -1931,21 +1931,16 @@\n market)%0A\n-     \n     elif\n@@ -1967,20 +1967,16 @@\n         \n-   \n- \n qntd = i\n@@ -1987,20 +1987,16 @@\n rgs%5B1%5D)%0A\n-    \n         \n@@ -2021,20 +2021,16 @@\n td)%0A    \n-  \n-  \n elif arg\n@@ -2043,28 +2043,24 @@\n = %22insert%22:%0A\n-    \n         mark\n@@ -2086,38 +2086,30 @@\n gs%5B1%5D))%0A    \n- \n-   \n else:%0A\n-    \n         prin\n",
+            "lines": "78"
+        },
+        {
+            "label": "2025-11-09_17-45-47",
+            "content": "@@ -1960,32 +1960,33 @@\n market)%0A        \n+ \n elif args%5B0%5D == \n",
+            "lines": "79"
+        },
+        {
+            "label": "2025-11-09_17-45-52",
+            "content": "@@ -1508,16 +1508,17 @@\n  %22-----,\n+ \n %22%0A      \n",
+            "lines": "79"
+        },
+        {
+            "label": "2025-11-09_17-46-07",
+            "content": "@@ -1507,16 +1507,17 @@\n = %22-----\n+,\n %22%0A      \n",
+            "lines": "79"
+        },
+        {
+            "label": "2025-11-09_17-46-13",
+            "content": "@@ -1388,69 +1388,51 @@\n     \n-pessoas = %22, %22.join(%5B(%22-----%22 if x is None else str(x)) for x\n+saida: str = %22Caixas: %5B%22%0A        for person\n  in \n@@ -1443,27 +1443,30 @@\n .counter\n-%5D)%0A\n+:%0A    \n         \n saida: s\n@@ -1461,41 +1461,140 @@\n     \n-saida: str = f%22Caixas: %5B%7Bpessoas%7D\n+if person is None:%0A                saida += %22-----%22%0A            else:%0A                saida += str(person) + %22, %22%0A        saida += %22\n %5D%5Cn%22\n",
+            "lines": "79"
+        },
+        {
+            "label": "2025-11-09_17-51-15",
+            "content": "@@ -2053,68 +2053,8 @@\n %5D))%0A\n-        elif args%5B0%5D == %22arrive%22:%0A            market.arrive%0A\n     \n",
+            "lines": "74"
+        },
+        {
+            "label": "2025-11-09_17-54-16",
+            "content": "@@ -1,2280 +1,69 @@\n-class Person:%0A    def __init__(self, name: str) -%3E None:%0A        self.name = name%0A%0A    def __str__(self) -%3E str:%0A        return self.name%0A%0Aclass Market:%0A    def __init__(self, counter_size: int) -%3E None:%0A        self.counter: list%5BPerson %7C None%5D = %5B%5D%0A        for _ in range(counter_size):%0A            self.counter.append(None)%0A        self.waiting: list%5BPerson%5D = %5B%5D%0A%0A    def arrive(self, person: Person):%0A        self.waiting.append(person)%0A%0A    def leave(self, index: int):%0A        if index %3C 0 or index %3E= len(self.counter):%0A            print(%22Indice invalido%22)%0A            return None%0A        if self.counter%5Bindex%5D is None:%0A            print(%22Caixa vazio%22)%0A            return None%0A        aux = self.counter%5Bindex%5D = None%0A        self.counter%5Bindex%5D = None%0A        return aux%0A    %0A    def give_up(self, name: str):%0A        for i, person in enumerate(self.waiting):%0A            if person.name == name:%0A                del self.waiting%5Bi%5D%0A                break%0A        %0A    def call(self, index: int):%0A        if index %3C 0 or index %3E= len(self.counter):%0A            print(%22Indice invalido%22)%0A            return%0A        if len(self.waiting) == 0:%0A            print(%22Fila vazia%22)%0A            return%0A        if self.counter%5Bindex%5D is not None:%0A            print(%22Caixa ocupado%22)%0A        self.counter%5Bindex%5D = self.waiting%5B0%5D%0A        del self.waiting%5B0%5D%0A%0A    def __str__(self) -%3E str:%0A        pessoas = %22, %22.join(%5B(%22-----%22 if x is None else str(x)) for x in self.counter%5D)%0A        saida: str = f%22Caixas: %5B%7Bpessoas%7D%5D%5Cn%22%0A        esperando = %22, %22.join(%5Bstr(x) for x in self.waiting%5D)%0A        saida += f%22Espera: %5B%7Besperando%7D%5D%22%0A        return saida%0A%0A%0Adef main():%0A    market = Market(0)%0A    while True:%0A%0A        line = input()%0A        print(%22$%22 + line)%0A        args = line.split(%22 %22)%0A        if args%5B0%5D == %22end%22:%0A            break%0A        elif args%5B0%5D == %22show%22:%0A            print(market)%0A        elif args%5B0%5D == %22init%22:%0A            qntd = int(args%5B1%5D)%0A            market = Market(qntd)%0A        elif args%5B0%5D == %22insert%22:%0A            market.arrive(Person(args%5B1%5D))%0A        elif args%5B0%5D == %22arrive%22:%0A            market.arrive(Person(args%5B1%5D))%0A        elif args%5B0%5D == %22call%22: %0A            i = int(arg%5B1%5D)%0A            market.call(i)%0A        else:%0A            print(%22comando invalido%22)%0A%0Amain()\n+@@ -2108,33 +2108,16 @@%0A t.arrive%0A-(Person(args%255B1%255D))%0A %250A       %0A\n",
+            "lines": "4"
+        },
+        {
+            "label": "2025-11-09_17-55-53",
+            "content": "@@ -2174,33 +2174,32 @@\n      i = int(arg\n-s\n %5B1%5D)%0A           \n",
+            "lines": "79"
+        },
+        {
+            "label": "2025-11-09_17-56-03",
+            "content": "@@ -2219,99 +2219,8 @@\n (i)%0A\n-        elif args%5B0%5D == %22finish%22:%0A            i = int(args%5B1%5D)%0A            market.leave%5Bi%5D%0A\n     \n",
+            "lines": "79"
+        },
+        {
+            "label": "2025-11-09_17-57-41",
+            "content": "@@ -2302,19 +2302,19 @@\n et.leave\n-(i)\n+%5Bi%5D\n %0A       \n",
+            "lines": "82"
+        },
+        {
+            "label": "2025-11-09_17-58-00",
+            "content": "@@ -1259,15 +1259,9 @@\n nt(%22\n-fail: c\n+C\n aixa\n",
+            "lines": "82"
+        },
+        {
+            "label": "2025-11-09_17-58-23",
+            "content": "@@ -1277,35 +1277,16 @@\n upado%22)%0A\n-            return%0A\n         \n",
+            "lines": "82"
+        },
+        {
+            "label": "2025-11-09_17-59-42",
+            "content": "@@ -1164,26 +1164,18 @@\n nt(%22\n-fail: sem clientes\n+Fila vazia\n %22)%0A \n",
+            "lines": "83"
+        },
+        {
+            "label": "2025-11-09_17-59-59",
+            "content": "@@ -544,31 +544,23 @@\n nt(%22\n-fail: caixa inexistente\n+Indice invalido\n %22)%0A \n@@ -637,31 +637,25 @@\n      print(%22\n-fail: c\n+C\n aixa vazio%22)\n",
+            "lines": "83"
+        },
+        {
+            "label": "2025-11-09_18-00-45",
+            "content": "class Person:\n    def __init__(self, name: str) -> None:\n        self.name = name\n\n    def __str__(self) -> str:\n        return self.name\n\nclass Market:\n    def __init__(self, counter_size: int) -> None:\n        self.counter: list[Person | None] = []\n        for _ in range(counter_size):\n            self.counter.append(None)\n        self.waiting: list[Person] = []\n\n    def arrive(self, person: Person):\n        self.waiting.append(person)\n\n    def leave(self, index: int):\n        if index < 0 or index >= len(self.counter):\n            print(\"fail: caixa inexistente\")\n            return None\n        if self.counter[index] is None:\n            print(\"fail: caixa vazio\")\n            return None\n        aux = self.counter[index] = None\n        self.counter[index] = None\n        return aux\n    \n    def give_up(self, name: str):\n        for i, person in enumerate(self.waiting):\n            if person.name == name:\n                del self.waiting[i]\n                break\n        \n    def call(self, index: int):\n        if index < 0 or index >= len(self.counter):\n            print(\"Indice invalido\")\n            return\n        if len(self.waiting) == 0:\n            print(\"fail: sem clientes\")\n            return\n        if self.counter[index] is not None:\n            print(\"fail: caixa ocupado\")\n            return\n        self.counter[index] = self.waiting[0]\n        del self.waiting[0]\n\n    def __str__(self) -> str:\n        pessoas = \", \".join([(\"-----\" if x is None else str(x)) for x in self.counter])\n        saida: str = f\"Caixas: [{pessoas}]\\n\"\n        esperando = \", \".join([str(x) for x in self.waiting])\n        saida += f\"Espera: [{esperando}]\"\n        return saida\n\n\ndef main():\n    market = Market(0)\n    while True:\n\n        line = input()\n        print(\"$\" + line)\n        args = line.split(\" \")\n        if args[0] == \"end\":\n            break\n        elif args[0] == \"show\":\n            print(market)\n        elif args[0] == \"init\":\n            qntd = int(args[1])\n            market = Market(qntd)\n        elif args[0] == \"insert\":\n            market.arrive(Person(args[1]))\n        elif args[0] == \"arrive\":\n            market.arrive(Person(args[1]))\n        elif args[0] == \"call\": \n            i = int(args[1])\n            market.call(i)\n        elif args[0] == \"finish\":\n            i = int(args[1])\n            market.leave(i)\n        else:\n            print(\"comando invalido\")\n\nmain()",
+            "lines": "83"
+        }
+    ]
+}
