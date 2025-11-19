@@ -1,0 +1,134 @@
+{
+    "patches": [
+        {
+            "label": "2025-11-19_21-34-11",
+            "content": "@@ -132,83 +132,13 @@\n     \n-#1 - Lista Vazia%0A    lista_vazia: list%5BFoo%5D = %5B%5D%0A%0A    #2 - Lista Preenchida\n+%0A    \n %0Amai\n",
+            "lines": "11"
+        },
+        {
+            "label": "2025-11-19_21-56-29",
+            "content": "@@ -164,310 +164,51 @@\n azia\n-_int: list%5Bint%5D = %5B%5D%0A    lista_vazia: list%5BFoo%5D = %5B%5D%0A    print(f%22%7Blista_vazia_int%7D e %7Blista_vazia%7D%22)%0A%0A    #2 - Lista Preenchida %0A    lista_pree_int: list%5Bint%5D = %5B1, 2, 3, 4, 5%5D%0A    lista_pree: list%5BFoo%5D = %5BFoo(1), Foo(2), Foo(3), Foo(4), Foo(5)%5D%0A    print(f%22%7Blista_pree_int%7D e %7Blista_pree%7D%22)%0A%0A    #3 - \n+: list%5BFoo%5D = %5B%5D%0A%0A    #2 - Lista Preenchida\n %0Amai\n",
+            "lines": "13"
+        },
+        {
+            "label": "2025-11-19_22-05-42",
+            "content": "@@ -466,153 +466,8 @@\n 3 - \n-Append%0A    lista_pree_int.append(6)%0A    lista_pree.append(Foo(4))%0A    print(f%22Depois do append %7Blista_pree_int%7D, %7B%5Bstr(f) for f in lista_pree%5D%7D%22)\n %0Amai\n",
+            "lines": "20"
+        },
+        {
+            "label": "2025-11-19_22-09-26",
+            "content": "@@ -611,32 +611,8 @@\n %5D%7D%22)\n-%0A%0A    #4 - Tamanho Lista\n %0Amai\n",
+            "lines": "23"
+        },
+        {
+            "label": "2025-11-19_22-10-12",
+            "content": "@@ -370,14 +370,11 @@\n  = %5B\n-pessoa\n+Foo\n (1),\n",
+            "lines": "25"
+        },
+        {
+            "label": "2025-11-19_22-10-32",
+            "content": "@@ -366,19 +366,22 @@\n Foo%5D = %5B\n-Foo\n+pessoa\n (1), Foo\n",
+            "lines": "25"
+        },
+        {
+            "label": "2025-11-19_22-10-45",
+            "content": "@@ -469,25 +469,24 @@\n  Append%0A    \n-#\n lista_pree_i\n@@ -502,17 +502,16 @@\n (6)%0A    \n-#\n lista_pr\n@@ -532,17 +532,16 @@\n 4))%0A    \n-#\n print(f%22\n",
+            "lines": "25"
+        },
+        {
+            "label": "2025-11-19_22-12-01",
+            "content": "@@ -469,24 +469,25 @@\n  Append%0A    \n+#\n lista_pree_i\n@@ -499,24 +499,25 @@\n pend(6)%0A    \n+#\n lista_pree.a\n@@ -530,24 +530,25 @@\n Foo(4))%0A    \n+#\n print(f%22Depo\n@@ -639,53 +639,8 @@\n sta%0A\n-    print(f%22Tamanho: %7Blen%7Blista_pree_int%7D%7D%22)%0A\n main\n",
+            "lines": "25"
+        },
+        {
+            "label": "2025-11-19_22-19-04",
+            "content": "@@ -556,17 +556,16 @@\n o append\n-:\n  %7Blista_\n@@ -677,15 +677,14 @@\n int%7D%7D%22)%0A\n-%0A\n main()\n",
+            "lines": "26"
+        },
+        {
+            "label": "2025-11-19_22-28-52",
+            "content": "@@ -556,16 +556,17 @@\n o append\n+:\n  %7Blista_\n@@ -654,25 +654,25 @@\n amanho: %7Blen\n-(\n+%7B\n lista_pree_i\n@@ -677,44 +677,14 @@\n _int\n-)%7D e Tamanho 2: %7Blen(lista_pree)\n+%7D\n %7D%22)%0A\n+%0A\n main\n",
+            "lines": "27"
+        },
+        {
+            "label": "2025-11-19_22-34-12",
+            "content": "@@ -621,161 +621,8 @@\n #4 -\n- pop%0A    u_int = lista_pree_int.pop()%0A    u_list = lista_pree.pop()%0A    print(f%22Depois do pop %7Blista_pree_int%7D, %7B%5Bstr(f) for f in lista_pree%5D%7D)%0A%0A    #5 -\n  Tam\n@@ -712,13 +712,8 @@\n %7D%22)%0A\n-    %0A\n main\n",
+            "lines": "26"
+        },
+        {
+            "label": "2025-11-19_22-44-18",
+            "content": "@@ -763,43 +763,9 @@\n ee%5D%7D\n- (removidos: %7Bu_int%7D e %7Bu_list%7D)%22)%0A\n+)\n %0A%0A  \n@@ -861,14 +861,19 @@\n ree)%7D%22)%0A\n+    %0A\n main()\n",
+            "lines": "32"
+        },
+        {
+            "label": "2025-11-19_22-45-04",
+            "content": "@@ -791,24 +791,25 @@\n u_list%7D)%22)%0A%0A\n+%0A\n     #5 - Tam\n@@ -898,83 +898,8 @@\n )%7D%22)\n-%0A%0A    #6 - Join%0A    print(f%22Join: %7B', '.join(str(f) for f in lista_pree)%7D%22)\n %0Amai\n",
+            "lines": "32"
+        },
+        {
+            "label": "2025-11-19_23-03-36",
+            "content": "@@ -114,69 +114,8 @@\n x%7D)'\n-%0A    %0A    def __repr__(self):%0A        return f'Foo(%7Bself.x%7D)'\n %0A%0Ade\n",
+            "lines": "34"
+        },
+        {
+            "label": "2025-11-19_23-05-59",
+            "content": "@@ -1033,103 +1033,8 @@\n )%7D%22)\n-%0A%0A    #7 - Sequencia%0A    sequencia = list(range(11))%0A    print (f%22Sequencia 1-10: %7Bsequencia%7D%22)\n %0Amai\n",
+            "lines": "37"
+        },
+        {
+            "label": "2025-11-19_23-09-00",
+            "content": "@@ -1105,17 +1105,17 @@\n quencia \n-0\n+1\n -10: %7Bse\n",
+            "lines": "41"
+        },
+        {
+            "label": "2025-11-19_23-09-06",
+            "content": "@@ -1128,137 +1128,8 @@\n a%7D%22)\n-%0A%0A    #8 - Numeros aleatorios%0A    random = %5Brandom.randint(1, 100) for _ in range (5)%5D%0A    print(f%22Numeros Aleat%C3%B3rios: %7Brandom%7D%22)\n %0Amai\n",
+            "lines": "41"
+        },
+        {
+            "label": "2025-11-19_23-11-46",
+            "content": "@@ -1158,25 +1158,22 @@\n ios%0A    \n-aleatorio\n+random\n  = %5Brand\n@@ -1244,25 +1244,22 @@\n %C3%B3rios: %7B\n-aleatorio\n+random\n %7D%22)%0Amain\n",
+            "lines": "45"
+        },
+        {
+            "label": "2025-11-19_23-12-58",
+            "content": "@@ -1,18 +1,4 @@\n-import random%0A\n clas\n",
+            "lines": "45"
+        },
+        {
+            "label": "2025-11-19_23-13-56",
+            "content": "@@ -7,17 +7,16 @@\n  random%0A\n-%0A\n class Fo\n@@ -1278,310 +1278,8 @@\n %7D%22)%0A\n-%0A    #9 - Procurar algo usando la%C3%A7o%0A    x = 3%0A    encontrar = None%0A    for i, elemento in enumerate(lista_pree_int):%0A        if elemento == x:%0A            encontrar = i%0A            break%0A        print(%22Elemento: %7Bx%7D %7B'encontrado em ' + str(encontrar) if encontrar is not None else 'nao encontrado'%7D%22)%0A%0A\n main\n",
+            "lines": "46"
+        },
+        {
+            "label": "2025-11-19_23-20-05",
+            "content": "@@ -1494,10 +1494,8 @@\n  %7Bx%7D\n- %22\n  %7B'e\n@@ -1573,16 +1573,17 @@\n ntrado'%7D\n+%22\n )%0A%0Amain(\n",
+            "lines": "57"
+        },
+        {
+            "label": "2025-11-19_23-21-21",
+            "content": "@@ -1289,49 +1289,72 @@\n 9 - \n-For range%0A    print(%22For Range:%22)\n+Procurar algo usando la%C3%A7o%0A    x = 3%0A    encontrar = None\n %0A    for\n  ele\n@@ -1349,16 +1349,19 @@\n %0A    for\n+ i,\n  element\n@@ -1361,24 +1361,34 @@\n elemento in \n+enumerate(\n lista_pree_i\n@@ -1389,18 +1389,89 @@\n pree_int\n+)\n :%0A\n+        if elemento == x:%0A            encontrar = i%0A            break%0A\n         \n@@ -1476,17 +1476,16 @@\n   print(\n-f\n %22Element\n@@ -1492,24 +1492,96 @@\n o: %7B\n-elemento%7D%22)%0A    \n+x%7D %22 %7B'encontrado em ' + str(encontrar) if encontrar is not None else 'nao encontrado'%7D)\n %0A%0Ama\n",
+            "lines": "57"
+        },
+        {
+            "label": "2025-11-19_23-23-45",
+            "content": "@@ -1398,104 +1398,12 @@\n %7D%22)%0A\n-%0A\n     \n-#10 - Filtro%0A    par = %5Bx for x in lista_pree_int if x %25 2 == 0%5D%0A    print(f%22Pares: %7Bpar%7D%22)\n %0A%0Ama\n",
+            "lines": "54"
+        },
+        {
+            "label": "2025-11-19_23-25-15",
+            "content": "@@ -1496,134 +1496,8 @@\n %22)%0A%0A\n-    #11 - Transformar Elementos%0A    quadrado = %5Bx ** 2 for x in lista_pree_int%5D%0A    print(f%22Valores ao quadrado %7Bquadrado%7D%22)%0A%0A\n main\n",
+            "lines": "57"
+        },
+        {
+            "label": "2025-11-19_23-27-08",
+            "content": "@@ -1399,151 +1399,8 @@\n %22)%0A%0A\n-    #10 - For Indexado%0A    print(%22For Indexado:%22)%0A    for i in range (len(lista_pree_int)):%0A        print(f%22Indice %7Bi%7D: %7Blista_pree_int%5Bi%5D%7D%22)%0A%0A\n     \n@@ -1412,16 +1412,16 @@\n  Filtro%0A\n+\n     par \n@@ -1527,24 +1527,8 @@\n ntos\n- no seu quadrado\n %0A   \n@@ -1572,16 +1572,16 @@\n ee_int%5D%0A\n+\n     prin\n@@ -1618,15 +1618,14 @@\n ado%7D%22)%0A%0A\n-%0A\n main()\n",
+            "lines": "61"
+        },
+        {
+            "label": "2025-11-19_23-35-05",
+            "content": "import random\n\nclass Foo:\n    def __init__(self, x: int):\n        self.x = x\n\n    def __str__(self):\n        return f'Foo({self.x})'\n    \n    def __repr__(self):\n        return f'Foo({self.x})'\n\ndef main():\n    #1 - Lista Vazia\n    lista_vazia_int: list[int] = []\n    lista_vazia: list[Foo] = []\n    print(f\"{lista_vazia_int} e {lista_vazia}\")\n\n    #2 - Lista Preenchida \n    lista_pree_int: list[int] = [1, 2, 3, 4, 5]\n    lista_pree: list[Foo] = [Foo(1), Foo(2), Foo(3), Foo(4), Foo(5)]\n    print(f\"{lista_pree_int} e {lista_pree}\")\n\n    #3 - Append\n    lista_pree_int.append(6)\n    lista_pree.append(Foo(4))\n    print(f\"Depois do append {lista_pree_int}, {[str(f) for f in lista_pree]}\")\n\n    #4 - pop\n    u_int = lista_pree_int.pop()\n    u_list = lista_pree.pop()\n    print(f\"Depois do pop {lista_pree_int}, {[str(f) for f in lista_pree]} (removidos: {u_int} e {u_list})\")\n\n    #5 - Tamanho Lista\n    print(f\"Tamanho: {len(lista_pree_int)} e Tamanho 2: {len(lista_pree)}\")\n\n    #6 - Join\n    print(f\"Join: {', '.join(str(f) for f in lista_pree)}\")\n\n    #7 - Sequencia\n    sequencia = list(range(11))\n    print (f\"Sequencia 0-10: {sequencia}\")\n\n    #8 - Numeros aleatorios\n    aleatorio = [random.randint(1, 100) for _ in range (5)]\n    print(f\"Numeros Aleat\u00f3rios: {aleatorio}\")\n\n    #9 - For range\n    print(\"For Range:\")\n    for elemento in lista_pree_int:\n        print(f\"Elemento: {elemento}\")\n\n    #10 - For Indexado\n    print(\"For Indexado:\")\n    for i in range (len(lista_pree_int)):\n        print(f\"Indice {i}: {lista_pree_int[i]}\")\n\n    #10 - Filtro\n    par = [x for x in lista_pree_int if x % 2 == 0]\n    print(f\"Pares: {par}\")\n\n    #11 - Transformar Elementos no seu quadrado\n    quadrado = [x ** 2 for x in lista_pree_int]\n    print(f\"Valores ao quadrado {quadrado}\")\n\n\nmain()",
+            "lines": "67"
+        }
+    ]
+}

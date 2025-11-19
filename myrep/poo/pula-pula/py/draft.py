@@ -23,7 +23,7 @@ class Trampoline:
         self.__playing: list[Kid] = []
         self.__waiting: list[Kid] = []
 
-    def __removeFromList(self, name:str, lista: list[Kid]) -> Kid | None:
+    def removeFromList(self, name:str, lista: list[Kid]) -> Kid | None:
         for i, kid in enumerate(lista):
             if kid.getName() == name:
                 return lista.pop(i)
@@ -43,10 +43,10 @@ class Trampoline:
             self.__waiting.append(kid)
 
     def removeKid(self, name: str):
-        kid = self.__removeFromList(name, self.__playing)
+        kid = self.removeFromList(name, self.__playing)
         if kid:
             return kid
-        kid = self.__removeFromList(name, self.__waiting)
+        kid = self.removeFromList(name, self.__waiting)
         if kid:
             return kid
         print(f"fail: {name} nao esta no pula-pula")
