@@ -19,7 +19,7 @@ class Lead:
     def getSize(self):
         return self.__size
 
-    def setSize(self, size: int):
+    def setSize(self, size: float):
         self.__size = size
 
     def __str__(self):
@@ -28,8 +28,8 @@ class Lead:
 class Pencil:
     def __init__(self, thickness: float):
         self.__thickness = thickness
-        self.__bico = []
-        self.__tambor = []
+        self.__bico: list[Lead] = []
+        self.__tambor: list[Lead] = []
 
     def inserir(self, thickness: float, hardness: str, size: int):
         if thickness != self.__thickness:
